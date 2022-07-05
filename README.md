@@ -6,17 +6,12 @@
 > npm link
 
 Запуск игр:
-> brain-games
-<br>
-> brain-even
-<br>
-> brain-calc
-<br>
-> brain-gcd
-<br>
-> brain-progression
-<br>
-> brain-prime
+> brain-games <br>
+> brain-even <br>
+> brain-calc <br>
+> brain-gcd <br>
+> brain-progression <br>
+> brain-prime 
 
 
 ### Hexlet tests and linter status:
