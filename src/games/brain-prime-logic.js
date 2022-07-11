@@ -1,6 +1,6 @@
-import { myRandom } from '../src/index.js';
+import { myRandom, gameCycle } from '../index.js';
 
-const brainPrime = () => {
+const brainPrimeLogic = () => {
   const questionNumber = myRandom(101);
   let correctAnswer;
   if (questionNumber <= 1) {
@@ -14,6 +14,10 @@ const brainPrime = () => {
     }
   }
   return [`${questionNumber}`, correctAnswer];
+};
+
+const brainPrime = () => {
+  gameCycle(brainPrimeLogic);
 };
 
 export default brainPrime;

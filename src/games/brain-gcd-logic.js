@@ -1,6 +1,6 @@
-import { myRandom } from '../src/index.js';
+import { myRandom, gameCycle } from '../index.js';
 
-const brainGCD = () => {
+const brainGCDLogic = () => {
   const numbers = [myRandom(100) + 1, myRandom(100) + 1];
 
   let gcd = 1;
@@ -12,6 +12,10 @@ const brainGCD = () => {
   const question = `${numbers[0]} ${numbers[1]}`;
 
   return [question, `${gcd}`];
+};
+
+const brainGCD = () => {
+  gameCycle(brainGCDLogic);
 };
 
 export default brainGCD;

@@ -1,6 +1,6 @@
-import { myRandom } from '../src/index.js';
+import { myRandom, gameCycle } from '../index.js';
 
-const brainEven = () => {
+const brainEvenLogic = () => {
   const testNumber = myRandom(1001);
   const isOdd = testNumber % 2;
   let correctAnswer;
@@ -10,6 +10,10 @@ const brainEven = () => {
     correctAnswer = 'no';
   }
   return [testNumber, correctAnswer];
+};
+
+const brainEven = () => {
+  gameCycle(brainEvenLogic);
 };
 
 export default brainEven;

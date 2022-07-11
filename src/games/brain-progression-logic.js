@@ -1,6 +1,6 @@
-import { myRandom } from '../src/index.js';
+import { myRandom, gameCycle } from '../index.js';
 
-const brainProgression = () => {
+const brainProgressionLogic = () => {
   const lowerLimitOfElements = 5;
   const upperLimitOfElements = 10;
   const delta = myRandom(20) + 1;
@@ -14,6 +14,10 @@ const brainProgression = () => {
   const answer = progression[blankElement];
   progression[blankElement] = '..';
   return [`${progression}`.replaceAll(',', ' '), `${answer}`];
+};
+
+const brainProgression = () => {
+  gameCycle(brainProgressionLogic);
 };
 
 export default brainProgression;
