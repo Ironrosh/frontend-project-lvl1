@@ -3,7 +3,7 @@ import { myRandom, gameCycle } from '../index.js';
 const isPrime = (numb) => {
   let correctAnswer;
   if (numb <= 1) {
-    correctAnswer = 'no';
+    return 'no';
   }
   correctAnswer = 'yes';
   for (let i = 2; i * i <= numb; i += 1) {
