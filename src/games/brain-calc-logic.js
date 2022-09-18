@@ -1,16 +1,16 @@
 import { myRandom, gameCycle } from '../index.js';
 
-const calculateResult = (operator, ...numbers) => {
+const calculateResult = (operator, numberA, numberB) => {
   let correctAnswer;
   switch (operator) {
     case '+':
-      correctAnswer = numbers[0] + numbers[1];
+      correctAnswer = numberA + numberB;
       break;
     case '-':
-      correctAnswer = numbers[0] - numbers[1];
+      correctAnswer = numberA - numberB;
       break;
     default:
-      correctAnswer = numbers[0] * numbers[1];
+      correctAnswer = numberA * numberB;
   }
   return correctAnswer;
 };
