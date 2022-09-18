@@ -1,14 +1,11 @@
 import { myRandom, gameCycle } from '../index.js';
 
+const isEven = (numb) => numb % 2 === 0;
+
 const brainEvenLogic = () => {
   const testNumber = myRandom(1001);
-  const isOdd = testNumber % 2;
-  let correctAnswer;
-  if (isOdd === 0) {
-    correctAnswer = 'yes';
-  } else {
-    correctAnswer = 'no';
-  }
+  const isNumEven = isEven(testNumber);
+  const correctAnswer = isNumEven ? 'yes' : 'no';
   return [testNumber, correctAnswer];
 };
 

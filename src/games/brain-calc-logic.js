@@ -1,9 +1,6 @@
 import { myRandom, gameCycle } from '../index.js';
 
-const brainCalcLogic = () => {
-  const operators = ['+', '-', '*'];
-  const operator = operators[myRandom(3)];
-  const numbers = [myRandom(100), myRandom(100)];
+const calculateResult = (operator, ...numbers) => {
   let correctAnswer;
   switch (operator) {
     case '+':
@@ -15,7 +12,16 @@ const brainCalcLogic = () => {
     default:
       correctAnswer = numbers[0] * numbers[1];
   }
-  const question = `${numbers[0]} ${operator} ${numbers[1]}`;
+  return correctAnswer;
+};
+
+const brainCalcLogic = () => {
+  const operators = ['+', '-', '*'];
+  const operator = operators[myRandom(operators.length)];
+  const numberA = myRandom(100);
+  const numberB = myRandom(100);
+  const correctAnswer = calculateResult(operator, numberA, numberB);
+  const question = `${numberA} ${operator} ${numberB}`;
 
   return [question, `${correctAnswer}`];
 };

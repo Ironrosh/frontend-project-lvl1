@@ -5,6 +5,7 @@ const myRandom = (upperLimit) => Math.floor(Math.random() * upperLimit);
 const rounds = 3;
 
 const gameCycle = (gameFunction) => {
+  let failed = false;
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
@@ -16,12 +17,14 @@ const gameCycle = (gameFunction) => {
     if (userAnswer !== rightAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'`);
       console.log(`Let's try again, ${userName}!`);
-      return false;
+      failed = true;
+      break;
     }
     console.log('Correct!');
   }
-  console.log(`Congratulations, ${userName}!`);
-  return true;
+  if (!failed) {
+    console.log(`Congratulations, ${userName}!`);
+  }
 };
 
 export { gameCycle, myRandom };

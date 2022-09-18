@@ -1,15 +1,13 @@
 import { myRandom, gameCycle } from '../index.js';
 
-const brainGCDLogic = () => {
-  const numbers = [myRandom(100) + 1, myRandom(100) + 1];
+const myGCD = (numA, numB) => (!numB ? numA : myGCD(numB, numA % numB));
 
-  let gcd = 1;
-  for (let i = 2; i <= Math.min(numbers[0], numbers[1]); i += 1) {
-    if (numbers[0] % i === 0 && numbers[1] % i === 0) {
-      gcd = i;
-    }
-  }
-  const question = `${numbers[0]} ${numbers[1]}`;
+const brainGCDLogic = () => {
+  const numberA = myRandom(100) + 1;
+  const numberB = myRandom(100) + 1;
+
+  const gcd = myGCD(numberA, numberB);
+  const question = `${numberA} ${numberB}`;
 
   return [question, `${gcd}`];
 };

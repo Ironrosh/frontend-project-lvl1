@@ -1,18 +1,23 @@
 import { myRandom, gameCycle } from '../index.js';
 
-const brainPrimeLogic = () => {
-  const questionNumber = myRandom(101);
+const isPrime = (numb) => {
   let correctAnswer;
-  if (questionNumber <= 1) {
+  if (numb <= 1) {
     correctAnswer = 'no';
   }
   correctAnswer = 'yes';
-  for (let i = 2; i * i <= questionNumber; i += 1) {
-    if (questionNumber % i === 0) {
+  for (let i = 2; i * i <= numb; i += 1) {
+    if (numb % i === 0) {
       correctAnswer = 'no';
       break;
     }
   }
+  return correctAnswer;
+};
+
+const brainPrimeLogic = () => {
+  const questionNumber = myRandom(101);
+  const correctAnswer = isPrime(questionNumber);
   return [`${questionNumber}`, correctAnswer];
 };
 

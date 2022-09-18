@@ -1,5 +1,8 @@
-### Первый проект из курса "Фронтенд-Разработчик" под названием "Игры Разума" 
+### Hexlet tests and linter status:
+[![Actions Status](https://github.com/Ironrosh/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Ironrosh/frontend-project-lvl1/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c717ab3fc673b370ac5c/maintainability)](https://codeclimate.com/github/Ironrosh/frontend-project-lvl1/maintainability)
 
+### Первый проект из курса "Фронтенд-Разработчик" под названием "Игры Разума"
 Установка библиотек dev окружения и линковка файлов из директории bin/
 > npm ci
 >
@@ -20,10 +23,5 @@
 > brain-progression <br>
 [![asciicast](https://asciinema.org/a/506371.svg)](https://asciinema.org/a/506371)
 #### Игра простые числа:
-> brain-prime 
+> brain-prime
 [![asciicast](https://asciinema.org/a/506487.svg)](https://asciinema.org/a/506487)
-
-
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/Ironrosh/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Ironrosh/frontend-project-lvl1/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/c717ab3fc673b370ac5c/maintainability)](https://codeclimate.com/github/Ironrosh/frontend-project-lvl1/maintainability)
